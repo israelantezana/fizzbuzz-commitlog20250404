@@ -12,9 +12,24 @@ describe("Fizzbuzz", () => {
   it("deberia mostrar fizz para 3", () => {
     expect(fizzbuzz(3)).toEqual("fizz");
   });
+
+  it("deberia mostrar fizz para multiplos de 3", () => {
+    expect(fizzbuzz(6)).toEqual("fizz");
+    expect(fizzbuzz(9)).toEqual("fizz");
+  });
+
+  it("deberia mostrar buzz para 5", () => {
+    expect(fizzbuzz(5)).toEqual("buzz");
+  });
+
+  it("deberia mostrar buzz para multiplos de 5", () => {
+    expect(fizzbuzz(10)).toEqual("buzz");
+    expect(fizzbuzz(15)).toEqual("buzz");
+  });
 });
 
 function fizzbuzz(n) {
-  if (n === 3) return "fizz";
+  if (n % 5 === 0) return "buzz";
+  if (n % 3 === 0) return "fizz";
   return "" + n;
 }
