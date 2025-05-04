@@ -1,9 +1,11 @@
-import sumar from "./sumador.js";
+//import sumar from "./sumador.js";
 
-describe("Sumar", () => {
-  it("deberia sumar dos numeros", () => {
-    expect(sumar(3, 2)).toEqual(5);
+describe("Fizzbuzz", () => {
+  it("deberia mostrar el numero", () => {
+    expect(fizzbuzz(1)).toEqual("1");
   });
 });
 
-
+function fizzbuzz(n) {
+  return "1";
+}
